@@ -1,6 +1,8 @@
 # Remote Virus Disinfection System
 Esta guía contiene el código de configuración de un sistema de desinfección remoto. 
 
+![diagrama](https://github.com/faviles7/disinfection_system/blob/main/diagrama_ds.jpg)
+
 ## Configuración del arduino (sensores y actuadores).
 *Revisar el archivo arduino
 
