@@ -1,0 +1,31 @@
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h> iniciación librería display 
+LiquidCrystal_I2C lcd(0x27,20,4); 
+int pinSensor = 8; selección del pin del sensor 
+int pinLed = 13; selección del pin del led 1 on 
+int pinbomba = 7; selección del pin de activación de la bomba 
+int pinTimbre = 10; selección de pin de señalización 
+int cont = 0; inicialización del contador 
+void setup() 
+{ 
+lcd.init(); 
+lcd.backlight(); 
+lcd.setCursor(3,0); 
+lcd.print("CABINA >>>"); imprimir mensaje en lcd 
+Serial.begin(9600); 
+pinMode(pinSensor,INPUT); activación del pin sensor - ENTRADA 
+pinMode(pinLed,OUTPUT); activación del pin led - SALIDA 
+pinMode(pinTimbre,OUTPUT); activación del pin señalizacion - SALIDA 
+pinMode(pinbomba,OUTPUT); activación del pin bomba - SALIDA 
+Serial.println("CABINA DE DESINFECCIÓN"); impresión mensaje 
+} 
+void loop() 
+{ 
+int lectura = digitalRead(pinSensor); lectura señal sensor 
+if(lectura == LOW) 
+{ 
+digitalWrite(pinLed,HIGH); activación pin 
+digitalWrite(pinbomba,HIGH);/////////////////// activación pin 
+delay(2000); temporizador 
+cont++; iniciación contador 
+digitalWrite(pinTimbre,LOW); escritura pin señalización 
