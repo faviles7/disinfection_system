@@ -1,7 +1,8 @@
 # Remote Virus Disinfection System
 Esta guía contiene el código de configuración de un sistema de desinfección remoto. 
 
-## CONFIGURACIÓN DEL ARDUINO (SENSORES Y ACTUADORES).
+## Configuración del arduino (sensores y actuadores).
 Revisar el archivo arduino
-## CONFIGURACIÓN DEL ESP8266 (CONTROL INALÁMBRICO). 
+
+## Configuración del ESP8266 (control inalámbrico).
 Revisar el archivo esp8266
